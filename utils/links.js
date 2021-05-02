@@ -29,8 +29,20 @@ let links = [
           {
             name: "Math",
             link: "/#oldstudy",
+            sublinks: [
+              {
+                name: "Algebra",
+                link: "/#oldstudy",
+              },
+              
+            ],
           },
         ],
+      },
+      {
+        name: "Upcoming",
+        link: "www.google.com",
+        current: false,
       },
     ],
   },

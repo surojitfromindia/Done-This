@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <div
         className={
-          "bg-emerald-500 flex fixed bottom-10 right-5 h-12 w-12 rounded-full hover:bg-red-600"
+          "bg-lightBlue-700 flex fixed bottom-10 right-5 h-12 w-12 rounded-full hover:bg-lightBlue-800"
         }
       >
         <MenuIcon

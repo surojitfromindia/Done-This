@@ -4,7 +4,9 @@ import OneMenu from "./OneMenu";
 
 export default function Navbar({ show }) {
   return (
-    <div className={"group bg-emerald-700 px-5 py-4  font-medium text-gray-100"}>
+    <div
+      className={"group bg-lightBlue-700 px-5 py-4  font-medium  text-gray-100"}
+    >
       <h1
         className={` transition-all delay-75 ease-in-out transform text-xl flex  ${
           show ? "max-h-0" : "max-h-72 "

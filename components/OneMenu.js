@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronRightIcon } from "@heroicons/react/solid";
+import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/solid";
 
 export default function OneMenu({ menu, cname, isArrowShow = true }) {
   const [open, setOpen] = useState(false);
@@ -10,13 +10,23 @@ export default function OneMenu({ menu, cname, isArrowShow = true }) {
     }
   };
   return (
-    <div className={"flex flex-col"}>
-      <div>
+    <div className={"flex flex-col justify-start"}>
+      <div className={"flex flex-row items-center"}>
+        {menu.sublinks && (
+          <div className={"flex items-center"}>
+            {open ? (
+              <ChevronDownIcon className={"h-5 w-5"} />
+            ) : (
+              <ChevronRightIcon className={"h-5 w-5"} />
+            )}
+          </div>
+        )}
+        {!menu.sublinks && <div className={"w-5"}></div>}
         {menu.link && (
           <Link href={menu.link}>
             <div
               onClick={handleOpen}
-              className={`mb-0.5  px-3 py-2  rounded-sm cursor-pointer hover:bg-red-700 flex items-center`}
+              className={`rounded-sm cursor-pointer `}
               id={cname}
             >
               {menu.name}
@@ -25,16 +35,10 @@ export default function OneMenu({ menu, cname, isArrowShow = true }) {
         )}
       </div>
       <div
-        className={`flex items-start transition-all ${
+        className={`flex flex-col transition-all ${
           open ? "max-h-96" : "max-h-0"
-        } overflow-hidden `}
+        } overflow-hidden ml-3`}
       >
-        {menu.sublinks && (
-          <div className={"py-2"}>
-            <ChevronRightIcon className={"h-5 w-5"} />
-          </div>
-        )}
-
         {menu.sublinks && (
           <div className={""}>
             {menu.sublinks.map((submenu) => (
