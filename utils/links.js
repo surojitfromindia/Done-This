@@ -1,55 +1,25 @@
 let links = [
   {
     name: "HOME",
-    link: "/#top",
-    current: true,
+    link: "/",
     sublinks: [
       {
         name: "New Studies",
-        link: "/#newstudey",
-        sublinks: [
-          {
-            name: "English",
-            link: "/#oldstudy",
-          },
-          {
-            name: "Math",
-            link: "/#oldstudy",
-          },
-        ],
+        link: "/#newstudy",
       },
       {
         name: "Old Studies",
         link: "/#oldstudy",
-        sublinks: [
-          {
-            name: "English",
-            link: "/#oldstudy",
-          },
-          {
-            name: "Math",
-            link: "/#oldstudy",
-            sublinks: [
-              {
-                name: "Algebra",
-                link: "/#oldstudy",
-              },
-              
-            ],
-          },
-        ],
       },
       {
         name: "Upcoming",
-        link: "www.google.com",
-        current: false,
+        link: "/#upcoming",
       },
     ],
   },
   {
     name: "ABOUT",
     link: "/about",
-    current: false,
     sublinks: [
       {
         name: "WHAT IS NEW",
