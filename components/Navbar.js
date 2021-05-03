@@ -7,7 +7,7 @@ export default function Navbar({ show }) {
   return (
     <div
       className={
-        "group bg-gradient-to-tr from-lightBlue-600 to-indigo-400 px-5 py-2   text-gray-100"
+        "group bg-gradient-to-tr from-lightBlue-600 to-indigo-400 px-5 py-5   text-gray-100"
       }
     >
       <div

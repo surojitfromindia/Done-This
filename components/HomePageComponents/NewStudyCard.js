@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export default function NewStudyCard() {
   return (
     <div
       className={
-        "px-5 py-3 rounded-md   bg-gradient-to-tr  to-orange-400 via-orange-600 from-red-500"
+        "transition-all hover:-mx-1 px-5 py-3 rounded-md bg-gradient-to-tr to-orange-400 via-orange-600 from-red-500"
       }
     >
       <span className={"font-medium tracking-wider text-lg text-gray-100"}>
@@ -22,7 +24,7 @@ export default function NewStudyCard() {
             "outline-none text-sm font-medium tracking-wider focus:outline-none w-16 px-3 py-1 rounded-md hover:bg-opacity-95 bg-orange-500 bg-opacity-80 text-warmGray-100"
           }
         >
-          Start
+          <Link href="/studies/NewStudy/All">Start</Link>
         </button>
       </div>
     </div>

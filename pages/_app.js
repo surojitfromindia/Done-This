@@ -1,13 +1,16 @@
 import "tailwindcss/tailwind.css";
 import NavBar from "../components/Navbar";
 import { MenuIcon } from "@heroicons/react/solid";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBarWithButton from "../components/NavBarWithButton";
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    document.body.classList.add("bg-coolGray-800");
+  }, []);
   const [showNav, setShowNav] = useState(false);
   return (
-    <body className={"absolute  bg-coolGray-800 top-0 bottom-0 left-0 right-0"}>
+    <div className={"absolute top-0 bottom-0 left-0 right-0"}>
       <div className={"sm:sticky top-0"}>
         <NavBar show={showNav} />
       </div>
@@ -30,14 +33,15 @@ function MyApp({ Component, pageProps }) {
 
         <div
           onClick={() => setShowNav(!showNav)}
+          style={{ width: "52px", height: "52px" }}
           className={
-            "h-12 w-12 justify-center items-center flex rounded-full bg-gradient-to-tr from-lightBlue-600 to-indigo-400 "
+            "justify-center items-center flex rounded-full bg-gradient-to-tr from-lightBlue-700 to-indigo-800 "
           }
         >
-          <MenuIcon className={"w-5 h-5 text-gray-50 "} />
+          <MenuIcon className={"w-7 h-7 text-gray-50 "} />
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 

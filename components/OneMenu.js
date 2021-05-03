@@ -13,24 +13,18 @@ export default function OneMenu({ menu, cname, isArrowShow = true }) {
     <div className={"flex flex-col justify-start"}>
       <div className={"flex flex-row items-center"}>
         {menu.sublinks && (
-          <div className={"flex items-center"}>
+          <div onClick={handleOpen} className={"flex items-center"}>
             {open ? (
-              <ChevronDownIcon className={"h-5 w-5"} />
+              <ChevronDownIcon id={cname} className={"h-5 w-5"} />
             ) : (
-              <ChevronRightIcon className={"h-5 w-5"} />
+              <ChevronRightIcon id={cname} className={"h-5 w-5"} />
             )}
           </div>
         )}
         {!menu.sublinks && <div className={"w-5"}></div>}
         {menu.link && (
           <Link href={menu.link}>
-            <div
-              onClick={handleOpen}
-              className={`rounded-sm cursor-pointer `}
-              id={cname}
-            >
-              {menu.name}
-            </div>
+            <div className={`rounded-sm cursor-pointer `}>{menu.name}</div>
           </Link>
         )}
       </div>

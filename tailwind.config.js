@@ -32,7 +32,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      padding: ["hover", "focus"],
+      height: ["hover"],
+    },
   },
   plugins: [],
 };
