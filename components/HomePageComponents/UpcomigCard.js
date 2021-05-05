@@ -9,9 +9,9 @@ export default function UpcomigCard() {
       <span className={"font-medium tracking-wider text-lg text-gray-100"}>
         UPCOMING
       </span>
-      <spam className={"block leading-4 text-sm   text-lightBlue-200 "}>
+      <span className={"block leading-4 text-sm   text-lightBlue-200 "}>
         view upcoming lessions in advance. topics will be coverd in next classes
-      </spam>
+      </span>
 
       <div className={"block leading-5 text-sm mb-4 mt-1.5"}>
         <span className={"text-xl  text-coolGray-200 font-medium"}>12</span>
@@ -23,7 +23,9 @@ export default function UpcomigCard() {
             "outline-none text-sm font-medium tracking-wider focus:outline-none w-16 px-3 py-1 rounded-md hover:bg-opacity-95 bg-lightBlue-400 bg-opacity-80 text-warmGray-100"
           }
         >
-          <Link href="/studies/UpcomingStudy/All">Start</Link>
+          <Link href="/studies/UpcomingStudy/All">
+            Start
+          </Link>
         </button>
       </div>
     </div>

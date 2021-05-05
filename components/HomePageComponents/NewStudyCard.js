@@ -10,9 +10,9 @@ export default function NewStudyCard() {
       <span className={"font-medium tracking-wider text-lg text-gray-100"}>
         NEW
       </span>
-      <spam className={"block leading-4 text-sm   text-red-200 "}>
+      <span className={"block leading-4 text-sm   text-red-200 "}>
         view upcoming lessions in advance. topics will be coverd in next classes
-      </spam>
+      </span>
 
       <div className={"block leading-5 text-sm mb-4 mt-1.5"}>
         <span className={"text-xl  text-coolGray-200 font-medium"}>13</span>

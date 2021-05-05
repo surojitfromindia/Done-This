@@ -28,7 +28,10 @@ export default function MoreDeatilsOnSubject({ subjectData, isDone = false }) {
           )}
         </div>
         <div className={"block leading-4 text-sm   text-red-200 "}>
-          <ul className={"flex flex-col list-none "}>
+          <ul
+            
+            className={"scrollbar flex flex-col list-none max-h-28 overflow-y-auto  "}
+          >
             {subjectData.points.map(({ type, des }, idx) => (
               <li className={"my-1"} key={idx}>
                 <div className={"flex items-start max-h-9 overflow-hidden "}>
@@ -60,7 +63,9 @@ export default function MoreDeatilsOnSubject({ subjectData, isDone = false }) {
             "pointer-events-auto outline-none text-sm font-medium tracking-wider focus:outline-none w-16 px-3 py-1 rounded-md hover:bg-opacity-30 bg-coolGray-100 bg-opacity-20 text-warmGray-100"
           }
         >
-          <Link href="/studies/NewStudy/ja">view</Link>
+          <Link href={`/studies/NewStudy/${subjectData?.subjectName}`}>
+            view
+          </Link>
         </button>
       </div>
     </div>

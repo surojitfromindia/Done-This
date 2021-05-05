@@ -29,6 +29,7 @@ module.exports = {
         coolGray: colors.coolGray,
         blueGray: colors.blueGray,
       },
+      
     },
   },
   variants: {

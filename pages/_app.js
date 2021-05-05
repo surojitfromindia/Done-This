@@ -1,4 +1,5 @@
-import "tailwindcss/tailwind.css";
+
+import "../styles/global.css";
 import NavBar from "../components/Navbar";
 import { MenuIcon } from "@heroicons/react/solid";
 import { useState, useEffect } from "react";

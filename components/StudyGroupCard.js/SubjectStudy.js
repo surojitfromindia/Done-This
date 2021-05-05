@@ -2,7 +2,7 @@ import { BadgeCheckIcon } from "@heroicons/react/solid";
 
 export default function SubjectStudy({ subjectData }) {
   return (
-    <div className={"py-2 sm:pl-3"}>
+    <div className={"py-2"}>
       <span className={"text-xl text-orange-100"}>
         {subjectData.subjectName}
       </span>
@@ -10,7 +10,7 @@ export default function SubjectStudy({ subjectData }) {
         <ul className={"my-2 max-w-md"}>
           {subjectData.points.map(({ type, des }, idx) => (
             <li className={"my-2"} key={idx}>
-              <div className={"flex "}>
+              <div className={"flex"}>
                 <BadgeCheckIcon
                   className={"w-5 h-5 mr-1.5 mt-1 flex-shrink-0  text-gray-200"}
                 />
