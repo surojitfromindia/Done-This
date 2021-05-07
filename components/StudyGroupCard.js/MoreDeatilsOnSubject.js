@@ -29,14 +29,17 @@ export default function MoreDeatilsOnSubject({ subjectData, isDone = false }) {
         </div>
         <div className={"block leading-4 text-sm   text-red-200 "}>
           <ul
-            
-            className={"scrollbar flex flex-col list-none max-h-28 overflow-y-auto  "}
+            className={
+              "scrollbar flex flex-col list-none max-h-28 overflow-y-auto  "
+            }
           >
-            {subjectData.points.map(({ type, des }, idx) => (
+            {subjectData.points.map(({ type, des, done }, idx) => (
               <li className={"my-1"} key={idx}>
                 <div className={"flex items-start max-h-9 overflow-hidden "}>
                   <BadgeCheckIcon
-                    className={"w-5 h-5 mr-1.5  flex-shrink-0  text-gray-200"}
+                    className={`w-5 h-5 mr-1.5 mt-1 flex-shrink-0 ${
+                      done ? "text-green-300" : ""
+                    } text-gray-200`}
                   />
                   <span className={"text-gray-100 leading-[1.125rem] "}>
                     {type && (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { links } from "../utils/links";
-import LoginAvater from "./ComonoComponents/LoginAvater";
+import LoginAvater from "./CommonComponents/LoginAvater";
 import OneMenu from "./OneMenu";
 
 export default function Navbar({ show }) {

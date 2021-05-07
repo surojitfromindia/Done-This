@@ -3,11 +3,13 @@ import React from "react";
 export default function Questions({ questions }) {
   return (
     <div
-      className={`px-5 py-3  bg-gradient-to-tl  from-teal-600 to-emerald-700 rounded-md  `}
+      className={`px-5 py-3  bg-gradient-to-tl divide-y divide-teal-600  from-teal-600 to-emerald-700 rounded-md  `}
     >
-      <span className={"text-2xl font-medium text-teal-100"}>Questions</span>
+      <span className={"text-2xl  font-medium text-teal-100"}>
+        Questions
+      </span>
 
-      <div className={"my-5"}>
+      <div className={"my-3"}>
         <ul className={"max-w-md"}>
           {questions.map(({ type, qtext, reference }, idx) => (
             <li className={"my-2"} key={idx}>
@@ -22,7 +24,7 @@ export default function Questions({ questions }) {
                     <span
                       className={"text-orange-100 font-medium"}
                     >{`[${type}]`}</span>
-                  )}{" "}
+                  )}
                   {qtext}
                 </span>
               </div>

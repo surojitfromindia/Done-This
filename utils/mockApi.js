@@ -5,25 +5,25 @@ let AllSubjectForToday = [
     topic: [
       {
         type: "Read",
-        done: true,
+        done: false,
         des: "Study my print programe.",
         lenDes:
           "I have taught you how to print a line or a word. And how to print variable that stores a line (string) in it.",
       },
       {
         type: "Read",
-        done: true,
+        done: false,
         des: "Open chapter 2. Read the 2nd page.",
       },
       {
         type: "Write",
-        done: true,
+        done: false,
         des: "Write a simple print programe to print out 3 lines",
       },
 
       {
         type: "Quiz",
-        done: true,
+        done: false,
         des: "Finish the quiz",
         lenDes: "Finish the quiz. scroll to bottom to start",
       },
@@ -88,16 +88,15 @@ let AllSubjectForToday = [
     topic: [
       {
         type: "Write",
-        done: true,
+        done: false,
         des: "Write a small 10 line pragraph on a day that you were sad.",
       },
       {
         type: "Read",
-        done: true,
+        done: false,
         des:
           "Read story on page 10 of your book. find 10 words that you don't the meaning of",
       },
-      
     ],
     question: [],
   },

@@ -4,7 +4,7 @@ import {
   OldStudyCard,
   SubjectCard,
 } from "../components/HomePageComponents/HomeExport";
-import Greet from "../components/ComonoComponents/Greet";
+import Greet from "../components/CommonComponents/Greet";
 
 export default function Home() {
   return (

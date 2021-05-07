@@ -8,11 +8,13 @@ export default function SubjectStudy({ subjectData }) {
       </span>
       <div>
         <ul className={"my-2 max-w-md"}>
-          {subjectData.points.map(({ type, des }, idx) => (
+          {subjectData.points.map(({ type, des, done }, idx) => (
             <li className={"my-2"} key={idx}>
               <div className={"flex"}>
                 <BadgeCheckIcon
-                  className={"w-5 h-5 mr-1.5 mt-1 flex-shrink-0  text-gray-200"}
+                  className={`w-5 h-5 mr-1.5 mt-1 flex-shrink-0 ${
+                    done ? "text-emerald-300" : ""
+                  } text-gray-200`}
                 />
                 <span className={"text-gray-100 "}>
                   {type && <span className={"text-orange-100"}>[{type}]</span>}{" "}

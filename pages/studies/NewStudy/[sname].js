@@ -1,26 +1,39 @@
 import NewStudyDetails from "../../../components/SubjectsAssemble/NewStudyDetails";
-import { AllSubjectForToday } from "../../../utils/mockApi";
+import { useState } from "react";
+import axios from "axios";
 
-export default function Hmm({ subject }) {
+export default function Hmm({ data }) {
+  const [subjectProp, _] = useState(data);
+  const handle = (updatedTopic) => {
+    let sname = data.subName;
+    axios
+      .post(`https://doneback.herokuapp.com/all/${sname}`, updatedTopic)
+      .then((res) => {
+        // alert(res.data);
+      });
+  };
   return (
-    <div className={"px-5 py-3"}>
-      {subject && <NewStudyDetails Subject={subject} />}
+    <div className={"px-5 py-3 flex justify-center items-center"}>
+      <NewStudyDetails Subject={subjectProp} onTopicComplete={handle} />
     </div>
   );
 }
 
 export async function getStaticProps({ params }) {
-  let subnameS = params.sname;
-  let subject = AllSubjectForToday.find((sub) => subnameS === sub.subName);
+  let sname = params.sname;
+  const { data } = await axios.get(
+    `https://doneback.herokuapp.com/all/${sname}`
+  );
   return {
-    props: { subject },
+    props: { data },
+    revalidate: 10,
   };
 }
 
 export async function getStaticPaths() {
   //here get all available subjects for this day
-  let subjectsForToday = AllSubjectForToday.map((sub) => sub.subName);
-  let path = subjectsForToday.map((subject) => ({
+  const { data } = await axios.get("https://doneback.herokuapp.com/sub");
+  let path = data.map((subject) => ({
     params: { sname: subject },
   }));
 

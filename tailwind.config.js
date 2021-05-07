@@ -5,6 +5,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      transitionProperty: {
+        height: "height",
+        width: "width",
+       
+      },
       colors: {
         rose: colors.rose,
         pink: colors.pink,
@@ -29,7 +34,6 @@ module.exports = {
         coolGray: colors.coolGray,
         blueGray: colors.blueGray,
       },
-      
     },
   },
   variants: {
