@@ -50,7 +50,7 @@ export default function All({ data }) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await axios.get(`http://localhost:5000/all`);
+  const { data } = await axios.get(`https://doneback.herokuapp.com/all`);
   return {
     props: {
       data,
