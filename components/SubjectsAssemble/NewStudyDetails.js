@@ -1,4 +1,4 @@
-import { Questions, Topic, TypeLegends } from "../OneStudy/OneStudyExp";
+import { Questions, Topic, TypeLegends, Quuuiz } from "../OneStudy/OneStudyExp";
 
 export default function NewStudyDetails({ Subject, onTopicComplete }) {
   return (
@@ -16,6 +16,9 @@ export default function NewStudyDetails({ Subject, onTopicComplete }) {
         {Subject.question.length > 0 && (
           <Questions questions={Subject.question} />
         )}
+      </div>
+      <div>
+        <Quuuiz />
       </div>
       <div>
         <TypeLegends />
